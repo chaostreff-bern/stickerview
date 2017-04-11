@@ -1,0 +1,26 @@
+# .gitignore
+
+# Python
+*.pyc
+/*.egg-info
+
+# Virtualenv
+/.python-version
+/.venv/
+
+# data directories
+/data/*
+/static/*
+
+# database
+*.sqlite
+*.sqlite3
+
+# Test environment
+/.cache
+/.coverage
+/.deps
+
+# documentation
+/build
+/doc/_build
