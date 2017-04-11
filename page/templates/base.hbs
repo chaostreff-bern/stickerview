@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="de">
+    <head>
+        <title>Zombieproductions</title>
+        <meta charset="utf-8" />
+
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1" />
+        <meta name="description"
+              content="Chaostreff Bern Sticker Exchange" />
+        <meta name="author"
+              content="webmaster <bern@chaostreff.ch>" />
+        <link href="{% static "images/favicon.ico" %}"
+              rel="shortcut icon" />
+        <link href="{% static "images/favicon.ico" %}" type="image/ico"
+              rel="icon" />
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static "css/bootstrap.min.css" %}"
+              rel="stylesheet" />
+        <link href="{% static "css/bootstrap-theme.min.css" %}"
+              rel="stylesheet" />
+        <link href="{% static "css/style.css" %}"
+              rel="stylesheet" />
+        <link href="{% static "css/font-awesome.min.css" %}"
+              rel="stylesheet" />
+        {% block header %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div> <!-- /container -->
+
+        <!-- JavaScript includes -->
+        <script type="text/javascript"
+                src="{% static "js/jquery.min.js" %}">
+        </script>
+        <script type="text/javascript"
+                src="{% static "js/bootstrap.min.js" %}">
+        </script>
+        <script type="text/javascript"
+                src="{% static "js/blueimp-helper.js" %}">
+        </script>
+        <script type="text/javascript"
+                src="{% static "js/blueimp-gallery.min.js" %}">
+        </script>
+        {% block footer %}
+        {% endblock %}
+    </body>
+</html>
+
+{# vim: set ft=html sw=4 ts=4 et wrap tw=76: #}
