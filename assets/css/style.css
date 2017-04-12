@@ -1,3 +1,8 @@
 body {
   padding-top: 70px;
+  background: #202020;
+}
+
+.navbar, .navbar-default, .navbar-fixed-top {
+  background: #202020;
 }
