@@ -1,6 +1,45 @@
 {% extends "base.hbs" %}
+{% load static %}
+{% load modulo %}
 
 {% block content %}
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+
+<div id="gallery_stickers">
+{% for sticker in stickers %}
+{% ifequal forloop.counter0|modulo:6 0 %}
+<div class="row">
+{% endifequal %}
+
+<div class="col-md-2 col-sm-3 col-xs-6 photo-view">
+    <a href="/media/{{ sticker.image }}">
+        <div class="caption">
+            <h3>{{ sticker.name }}</h3>
+        </div>
+        <img src="/media/{{ sticker.image }}"
+             alt="{{ sticker.name }}" /><br />
+    </a>
+</div>
+
+{% ifequal forloop.counter0|modulo:6 5 %}
+</div>
+{% endifequal %}
+{% endfor %}
+</div>
+{% endblock %}
+
+{% block footer %}
+<script type="text/javascript"
+        src="{% static "js/gallery-stickers.js" %}">
+</script>
 {% endblock %}
 
 {# vim: set ft=html sw=4 ts=4 et wrap tw=76: #}
