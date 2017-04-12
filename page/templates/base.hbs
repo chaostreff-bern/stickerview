@@ -28,6 +28,36 @@
     </head>
 
     <body>
+        <!-- Static navbar -->
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="/">
+                        <b>Stickerview</b>
+                    </a>
+                </div>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <label class="sr-only"
+                               for="StickerSearch">
+                            Sticker Search
+                        </label>
+                        <div class="input-group">
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button type="submit"
+                                        class="btn btn-default">
+                                    Search
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div><!--/.container-fluid -->
+        </div>
+
         <div class="container">
             {% block content %}
             {% endblock %}
