@@ -10,3 +10,13 @@ class TagSerializer(ModelSerializer):
         fields = [
             'name',
         ]
+
+
+class StickerSerializer(ModelSerializer):
+    class Meta:
+        model = models.Sticker
+        fields = [
+            'name',
+            'image',
+            'tags',
+        ]
