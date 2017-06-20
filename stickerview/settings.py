@@ -23,6 +23,7 @@ SECRET_KEY = '9!u_+oezn90!3*0o9+wmh-su$h06u*q6q-0z1g%p7c-))$9hs&'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    os.getenv('VIRTUAL_HOST', None),
     'localhost',
 ]
 
