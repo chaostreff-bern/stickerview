@@ -25,7 +25,7 @@ setup(
     keywords='stickerview django REST',
     author='Tobias Rueetschi',
     author_email='tr@brief.li',
-    url='https://github.com/keachi/stickerview',
+    url='https://github.com/chaostreff-bern/stickerview',
     license='AGPLv3',
     packages=find_packages(),
     install_requires=[
