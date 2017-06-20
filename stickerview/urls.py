@@ -23,7 +23,7 @@ from django.contrib import admin
 
 
 urlpatterns = [
-    url(r'^$',              include('page.urls')),
+    url(r'^',               include('page.urls')),
     url(r'^api/v1/',        include('api_v1.urls')),
     url(r'^admin/',         admin.site.urls),
 ] + static(
