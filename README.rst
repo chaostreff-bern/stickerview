@@ -36,7 +36,7 @@ And then start the application.
 LICENSE
 =======
 
-Copyright (C) 2016  Tobias Rueetschi
+Copyright (C) 2016-2017  Tobias Rueetschi
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU Affero General Public License as published by
