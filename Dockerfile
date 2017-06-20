@@ -12,7 +12,7 @@ RUN apk update \
         mariadb-dev \
     && git clone https://github.com/keachi/stickerview.git /app \
     && cd /app \
-    && pip install -r .requirements.txt \
+    && pip install /app \
     && pip install gunicorn \
     && apk del \
         git \
