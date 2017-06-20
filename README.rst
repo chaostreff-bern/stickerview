@@ -23,6 +23,7 @@ First, create the data directory, and after the database.
 .. code-block:: Bash
 
   cd /opt/stickerview
+  mkdir -p data
   ./manage.py migrate
   ./manage.py collectstatic
 
