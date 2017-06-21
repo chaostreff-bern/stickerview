@@ -10,7 +10,7 @@ RUN apk update \
         musl-dev \
         postgresql-dev \
         mariadb-dev \
-    && git clone https://github.com/keachi/stickerview.git /app \
+    && git clone https://github.com/chaostreff-bern/stickerview.git /app \
     && cd /app \
     && pip install /app \
     && pip install gunicorn \
