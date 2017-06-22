@@ -35,10 +35,14 @@ setup(
         'django-filter',
         'Pillow',
         'pytz',
-        'psycopg2',
-        'mysqlclient',
     ],
     extras_require={
+        'mysql': [
+            'mysqlclient',
+        ],
+        'pgsql': [
+            'psycopg2',
+        ],
         'test': [
             'pytest',
             'pytest-django',

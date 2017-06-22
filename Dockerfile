@@ -1,5 +1,6 @@
 FROM python:3.6.1-alpine
 
+COPY . /host/
 RUN apk update \
     && apk upgrade \
     && apk add --no-cache \
@@ -10,14 +11,15 @@ RUN apk update \
         musl-dev \
         postgresql-dev \
         mariadb-dev \
-    && git clone https://github.com/chaostreff-bern/stickerview.git /app \
+    && mkdir -p /app \
     && cd /app \
-    && pip install /app \
+    && pip install --compile /host[mysql,pgsql] \
     && pip install gunicorn \
     && apk del \
         git \
         gcc \
         musl-dev \
+    && rm -rf /host \
     && rm -rf /var/lib/apk/* /var/cache/apk/*
 
 WORKDIR /app
